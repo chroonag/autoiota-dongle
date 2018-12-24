@@ -1,2 +1,21 @@
 # autoiota-dongle
 Runtime for OBD IOT Hardware
+
+## prepare saltstack minion
+1. Install saltstack minion: https://repo.saltstack.com/#bootstrap
+2. Clone this repository
+```
+git clone https://github.com/chroonag/autoiota-dongle.git
+```
+3. Copy minion configuration
+```
+sudo cp -f autoiota-dongle/cfg/minion /etc/salt/
+```
+4. Copy salt files
+```
+sudo cp -r autoiota-dongle/srv/* /srv/
+```
+5. Restart saltstack minion
+```
+sudo systemctl restart salt-minion
+```
