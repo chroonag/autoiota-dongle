@@ -2,5 +2,5 @@
 
 base:
   '*':
-    - user/group
-    - user/user
+    - users/users
+    - sshd/sshd
