@@ -22,5 +22,5 @@ sudo systemctl restart salt-minion
 
 ## Run Salt local
 ```
-sudo salt-call --local state.apply saltenv=base [-l debug]
+sudo salt-call --local state.apply saltenv=base [-l debug] [test=True]
 ```
