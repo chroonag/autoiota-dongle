@@ -1,4 +1,4 @@
 # init all states in this directory
 
-inlcude:
+include:
   - .users

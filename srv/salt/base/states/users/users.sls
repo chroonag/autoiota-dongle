@@ -16,7 +16,7 @@ users_{{username}}_{{groupname}}_group:
 users_{{username}}_user:
   group.present:
     - name: {{user_group}}
-    - gid: {{userdata['uid']}
+    - gid: {{userdata['uid']}}
   user.present:
     - name: {{username}}
     - home: {{user_home}}
