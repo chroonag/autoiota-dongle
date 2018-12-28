@@ -10,8 +10,7 @@ sshd_deploy_config_file:
   - force: True
   - source_hash: {{ salt['pillar.get']('sshd:sshd_file_hash', '') }} # TODO Auslagern auf URI (http://...)
 
-sshd:
-  service.running:
-    - reload: True
+ssh:
+  service.reload:
     - watch:
       - file: sshd_deploy_config_file
