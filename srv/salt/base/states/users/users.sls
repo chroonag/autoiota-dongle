@@ -33,7 +33,7 @@ users_{{username}}_user:
 {% if 'ssh_auth' in userdata %}
 {% for ssh_key in userdata['ssh_auth'] %}
 users_ssh_auth_{{username}}_{{loop.index0}}:
-  ssh_auth.present: # TODO file permissions?
+  ssh_auth.present:
     - user: {{username}}
     - name: {{ssh_key}}
 {% endfor %}

@@ -22,3 +22,9 @@ pillar_roots:
     - /srv/salt/_pillars
 
 multiprocessing: False
+
+### system startup states ###
+startup_states: sls
+
+sls_list:
+  - startup.sls
