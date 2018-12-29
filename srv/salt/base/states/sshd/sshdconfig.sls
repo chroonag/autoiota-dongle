@@ -20,6 +20,8 @@ sshd_deploy_sshbanner:
     - source_hash: {{ salt['pillar.get']('sshd:sshd_banner_hash', '') }} # TODO Auslagern auf URI (http://...)
 
 ssh:
-  service.reload:
+  service.running:
+    - enable: True
+    - reload: True
     - watch:
       - file: sshd_deploy_config_file

@@ -1,4 +1,4 @@
 requirements_network:
   pkg.installed:
     - pkgs:
-      - ssh
+      - openssh-server
