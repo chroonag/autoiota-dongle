@@ -1,6 +1,11 @@
-# run stuff on system boot
+# runs on system boot
 
-disable_root_login:
+{% set local_users = salt['user.list_users']() %}
+
+{% for username in local_users %}
+disable_local_login_{{username}}:
   user.present:
-    - name: root
-    - password: * # disable login (/etc/shadow)
+    - name: {{username}}
+    - createhome: False
+    - password: '*' # disable local login (/etc/shadow)
+{% endfor %}
