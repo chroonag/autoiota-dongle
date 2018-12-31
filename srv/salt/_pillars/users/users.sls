@@ -6,6 +6,7 @@ users:
     home: /home/serviceuser
     shell: /bin/bash
     uid: 4050
+    password: $1$hpF2o11g$kOC6utTNHXW2CAQSHK/La/
     groups: # new (user)group will be created with username
       {% if grains['os_family'] == 'Debian' %}
       - sudo # enable sudo for this user
