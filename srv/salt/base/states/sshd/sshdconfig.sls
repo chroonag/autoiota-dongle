@@ -13,7 +13,7 @@ sshd_deploy_config_file:
 sshd_deploy_sshbanner:
   file.managed:
     - name: {{ salt['pillar.get']('sshd:sshd_sshbanner_file', '') }}
-    - source: salt://network/sshd/sshbanner
+    - source: salt://network/ssh/sshbanner
     - user: root
     - group: root
     - mode: 644
