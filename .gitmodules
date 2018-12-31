@@ -1,0 +1,9 @@
+[submodule "srv/salt/_formulas/redis-formula"]
+	path = srv/salt/_formulas/redis-formula
+	url = https://github.com/chroonag/redis-formula
+[submodule "srv/salt/_formulas/hostapd-formula"]
+	path = srv/salt/_formulas/hostapd-formula
+	url = https://github.com/chroonag/hostapd-formula
+[submodule "srv/salt/_formulas/dnsmasq-formula"]
+	path = srv/salt/_formulas/dnsmasq-formula
+	url = https://github.com/chroonag/dnsmasq-formula.git

@@ -1,3 +1,9 @@
+# setup hotspot with dnsmasq and hostapd
+
+include:
+  - hostapd
+  - dnsmasq
+
 reboot-requested-after-ap-udev-rules-changed:
   module.wait:
     - name: system.reboot
