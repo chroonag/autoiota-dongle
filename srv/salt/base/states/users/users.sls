@@ -22,7 +22,6 @@ users_{{username}}_user:
     - home: {{user_home}}
     - shell: {{userdata.get('shell')}}
     - uid: {{userdata.get('uid')}}
-    - password: {{userdata.get('pwd')}}
     - groups:
       - {{user_group}}
       {% for group in userdata.get('groups', []) %}

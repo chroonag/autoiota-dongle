@@ -5,7 +5,6 @@ users:
   serviceuser:
     home: /home/serviceuser
     shell: /bin/bash
-    pwd: *
     uid: 4050
     groups: # new (user)group will be created with username
       {% if grains['os_family'] == 'Debian' %}
