@@ -30,4 +30,4 @@ multiprocessing: False
 startup_states: sls
 
 sls_list:
-  - startup.sls
+  - startup
