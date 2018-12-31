@@ -1,4 +1,8 @@
 # set up networking stuff
 
 include:
-  - .firewalld
+  - .hotspot
+  - .dhcp
+  - .iptable
+  - .ip
+  - .wlanclient
