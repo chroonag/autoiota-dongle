@@ -9,7 +9,7 @@ git clone --recurse-submodules https://github.com/chroonag/autoiota-dongle.git
 ```
 3. Copy minion configuration
 ```
-sudo cp -f autoiota-dongle/cfg/minion /etc/salt/
+sudo cp -f autoiota-dongle/cfg/minion-dev /etc/salt/minion
 ```
 4. Copy salt files
 ```
