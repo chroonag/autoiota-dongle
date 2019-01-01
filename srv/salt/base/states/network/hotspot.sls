@@ -1,12 +1,8 @@
-# setup hotspot with dnsmasq and hostapd
+# setup hotspot with dnsmasq and hostapd formulas
 
 include:
   - hostapd
   - dnsmasq
-
-reboot-requested-after-ap-udev-rules-changed:
-  module.wait:
-    - name: system.reboot
 
 /etc/udev/rules.d/90-ap.rules:
   file.managed:
