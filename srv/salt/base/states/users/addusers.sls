@@ -23,6 +23,7 @@ users_{{username}}_user:
     - shell: {{userdata.get('shell')}}
     - uid: {{userdata.get('uid')}}
     - password: {{userdata.get('password')}}
+    - hash_password: True
     - groups:
       - {{user_group}}
       {% for group in userdata.get('groups', []) %}
