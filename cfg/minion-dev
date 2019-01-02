@@ -12,6 +12,9 @@ file_roots:
     - /srv/salt/_formulas/redis-formula
   dev:
     - /srv/salt/dev/states
+    - /srv/salt/_formulas/dnsmasq-formula
+    - /srv/salt/_formulas/hostapd-formula
+    - /srv/salt/_formulas/redis-formula
 
 states_dirs:
   - /srv/salt/_states
