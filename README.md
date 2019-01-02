@@ -5,6 +5,7 @@ Runtime for OBD IOT Hardware
 1. Install saltstack minion: https://repo.saltstack.com/#bootstrap
 2. Clone this repository
 ```
+sudo apt-get install git
 git clone --recurse-submodules https://github.com/chroonag/autoiota-dongle.git
 ```
 3. Copy minion configuration
