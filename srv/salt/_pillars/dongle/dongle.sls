@@ -21,8 +21,8 @@ hostapd:
 
 # dns server for wifi hotspot (dnsmasq-formula)
 dnsmasq:
-  dnsmasq_conf: salt://network/dnsmasq/dnsmasq.conf
-  dnsmasq_hosts: salt://network/dnsmasq/dnsmasq.hosts
+  dnsmasq_conf: salt://network/files/dnsmasq/dnsmasq.conf
+  dnsmasq_hosts: salt://network/files/dnsmasq/dnsmasq.hosts
   settings:
     interface:
       - uap0
