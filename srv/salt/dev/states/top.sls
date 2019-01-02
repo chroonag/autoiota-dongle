@@ -1,11 +1,5 @@
-base:
-  '*':
-    - requirements.pkg-requirements
-    - users.addusers
-    - users.config-sudo
-    - network.hotspot
-    - network.dhcp
-    - network.ip
-    - network.wlanclient
+dev:
+  'dev*':
     - sshd.install
     - sshd.config
+    - network.iptable-dev

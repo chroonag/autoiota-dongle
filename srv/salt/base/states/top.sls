@@ -7,9 +7,7 @@ base:
     - network.dhcp
     - network.ip
     - network.wlanclient
-  'dev*':
-    - sshd.install
-    - sshd.config
+
   'prod*':
     - network.iptable
     - sshd.absent
