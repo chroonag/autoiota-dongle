@@ -12,7 +12,7 @@ wpa-manager-service-configured:
 wpa-manager-service-running:
   service.running:
     - name: wpa-manager
-    - enable: true
+    - enable: false # TODO enable with webinterface when login set
     - require:
       - file: /lib/systemd/system/wpa-manager.service
     - watch:
