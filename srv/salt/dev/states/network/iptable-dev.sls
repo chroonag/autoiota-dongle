@@ -9,6 +9,10 @@ iptables-ipv4-rules-config:
     - require:
       - pkg: iptables-persistent
 
+ipv6-rules-deleted:
+  file.absent:
+    - name: /etc/iptables/rules.v6  # Must be deleted to prevent boot error when ipv6 is diabled
+
 # load rules immediately instead of waiting until next reboot
 iptables-ipv4-rules-loaded:
   cmd.run:
