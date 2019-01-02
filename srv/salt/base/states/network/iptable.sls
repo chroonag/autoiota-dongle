@@ -5,7 +5,7 @@ iptables-persistent-installed:
 iptables-ipv4-rules-config:
   file.managed:
     - name: /etc/iptables/rules.v4
-    - source: salt://network/iptable/iptable-ipv4.rules
+    - source: salt://network/files/iptable/iptable-ipv4.rules
     - require:
       - pkg: iptables-persistent
 

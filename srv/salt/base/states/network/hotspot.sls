@@ -6,4 +6,4 @@ include:
 
 /etc/udev/rules.d/90-ap.rules:
   file.managed:
-    - source: salt://network/wlan/hotspot/udev.rules
+    - source: salt://network/files/wlan/hotspot/udev.rules

@@ -1,7 +1,7 @@
 dhcpcd-static-ip-config:
   file.managed:
     - name: /etc/dhcpcd.conf
-    - source: salt://network/dhcp/dhcpcd.conf
+    - source: salt://network/files/dhcp/dhcpcd.conf
 
 dhcpcd-service-running:
   service.running:

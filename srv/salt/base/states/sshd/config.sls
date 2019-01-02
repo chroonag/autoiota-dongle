@@ -3,7 +3,7 @@
 sshd_deploy_config_file:
   file.managed:
   - name: {{ salt['pillar.get']('sshd:sshd_config_file', '/etc/ssh/sshd_config') }}
-  - source: salt://network/ssh/base_sshd_config
+  - source: salt://sshd/files/base_sshd_config
   - user: root
   - group: root
   - mode: 644
@@ -13,7 +13,7 @@ sshd_deploy_config_file:
 sshd_deploy_sshbanner:
   file.managed:
     - name: {{ salt['pillar.get']('sshd:sshd_sshbanner_file', '') }}
-    - source: salt://network/ssh/sshbanner
+    - source: salt://sshd/files/sshbanner
     - user: root
     - group: root
     - mode: 644

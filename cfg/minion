@@ -1,8 +1,5 @@
-id: dev-autoiota
 master_type: disable
 file_client: local
-default_top: dev
-top_file_merging_strategy: same
 
 file_roots:
   base:
@@ -27,3 +24,9 @@ pillar_roots:
     - /srv/salt/_pillars
 
 multiprocessing: False
+
+### system startup states ###
+startup_states: sls
+
+sls_list:
+  - startup
