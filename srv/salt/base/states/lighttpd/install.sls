@@ -2,12 +2,14 @@ install.lighttpd:
   pkg.installed:
     - name: lighttpd
 
-www-data:
+www_data_group:
   group.present:
+    - name: www-data
     - system: True
 
-www-data:
+www_data_user:
   user.present:
+    - name: www-data
     - createhome: False
     - groups:
       - www-data
@@ -15,8 +17,8 @@ www-data:
 create.www.root.folder:
   file.directory:
     - name: /var/www/html
-    - user: lighttpd
-    - group: lighttpd
+    - user: www-data
+    - group: www-data
     - dir_mode: 440
     - file_mode: 440
     - makedir: True
