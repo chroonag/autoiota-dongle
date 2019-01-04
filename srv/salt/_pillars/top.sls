@@ -5,3 +5,4 @@ base:
     - users/users
     - sshd/sshd
     - dongle/dongle
+    - lighttpd/lighttpd

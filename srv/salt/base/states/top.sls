@@ -7,6 +7,8 @@ base:
     - network.dhcp
     - network.ip
     - network.wlanclient
+    - lighttpd.install
+    - lighttpd.config
 
   'prod*':
     - network.iptable
