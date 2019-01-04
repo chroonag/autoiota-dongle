@@ -19,8 +19,8 @@ create.www.root.folder:
     - name: /var/www/html
     - user: www-data
     - group: www-data
-    - dir_mode: 440
-    - file_mode: 440
+    - dir_mode: 750
+    - file_mode: 750
     - makedir: True
     - recurse: # sets the above parameters to all subfolders and files if they already exists
       - user
