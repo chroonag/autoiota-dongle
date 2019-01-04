@@ -18,4 +18,4 @@ dev-iptables-ipv4-rules-loaded:
   cmd.run:
     - name: "iptables-restore < /etc/iptables/rules.v4"
     - onchanges:
-      - file: iptables-ipv4-rules-config
+      - file: dev-iptables-ipv4-rules-config
