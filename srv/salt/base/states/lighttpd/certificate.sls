@@ -51,11 +51,11 @@ create-pem-file-from-pki:
     - group: root
     - mode: 400
     - require:
-      x509: managed-private-key
+      - x509: managed-private-key
 
 append-certificate-to-pem-file:
   file.append:
     - name: {{ pki_dir }}/{{ pem_file }}
     - source: {{ cert_dir }}/{{ cert_file }}
     - require:
-      file: create-pem-file-from-pki
+      - file: create-pem-file-from-pki
