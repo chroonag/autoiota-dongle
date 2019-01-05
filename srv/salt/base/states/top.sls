@@ -8,6 +8,7 @@ base:
     - network.ip
     - network.wlanclient
     - lighttpd.install
+    - lighttpd.certificate
     - lighttpd.config
 
   'prod*':

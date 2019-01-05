@@ -1,0 +1,28 @@
+{% set hotspotip = pillar['dnsmasq']['local.autoiota.io'] %}
+{% set document_root = pillar['lighttpd']['document_root'] %}
+{% set pki = pillar['lighttpd']['pki_directory'] / pillar['lighttpd']['pki_file'] %}
+
+$HTTP["scheme"] == "http" {
+    url.redirect = ("" => "https://${authority}${path}${qsa}")
+}
+
+$SERVER["socket"] == "{{ hotspotip }}:443" {
+    ssl.engine  = "enable"
+    ssl.pemfile = "{{ pki }}"
+    $HTTP["host"] == "local.autoiota.io" {
+      server.document-root = "{{ document_root }}"
+    }
+}
+
+server.username = "{{ pillar['lighttpd']['www_user'] }}"
+server.groupname = "{{ pillar['lighttpd']['www_group'] }}"
+
+mimetype.assign = (
+  ".html" => "text/html",
+  ".txt" => "text/plain",
+  ".jpg" => "image/jpeg",
+  ".png" => "image/png"
+)
+
+static-file.exclude-extensions = ( ".fcgi", ".php", ".rb", "~", ".inc" )
+index-file.names = ( "index.html" )

@@ -1,4 +1,11 @@
 lighttpd:
+  cert_directory: /etc/lighttpd/cert
+  pki_directory: /etc/lighttpd/ssl
+  cert_file: ca.crt
+  pki_file: ca.key
+  document_root: /var/www/html
   {% if grains['os_family'] == 'Debian' %}
-  lighttpd_config_file: '/etc/lighttpd/lighttpd.conf'
+  config_file: /etc/lighttpd/lighttpd.conf
+  www_user: www-data
+  www_group: www-data
   {% endif %}

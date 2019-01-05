@@ -1,26 +1,26 @@
-install.lighttpd:
+install-lighttpd-pkg:
   pkg.installed:
     - name: lighttpd
 
-www_data_group:
+www-data-group:
   group.present:
-    - name: www-data
+    - name: {{ pillar['lighttpd']['www_group'] }}
     - system: True
 
-www_data_user:
+www-data-user:
   user.present:
-    - name: www-data
+    - name: {{ pillar['lighttpd']['www_user'] }}
     - createhome: False
     - groups:
-      - www-data
+      - {{ pillar['lighttpd']['www_group'] }}
 
-create.www.root.folder:
+create-www-root-folder:
   file.directory:
-    - name: /var/www/html
-    - user: www-data
-    - group: www-data
-    - dir_mode: 750
-    - file_mode: 750
+    - name: {{ pillar['lighttpd']['document_root'] }}
+    - user: {{ pillar['lighttpd']['www_user'] }}
+    - group: {{ pillar['lighttpd']['www_group'] }}
+    - dir_mode: 440
+    - file_mode: 440
     - makedir: True
     - recurse: # sets the above parameters to all subfolders and files if they already exists
       - user
