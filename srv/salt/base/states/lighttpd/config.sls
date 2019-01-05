@@ -11,6 +11,5 @@ lighttpd_deploy_config_file:
 lighttpd:
   service.running:
     - enable: True
-    - reload: True
     - watch:
       - file: lighttpd_deploy_config_file

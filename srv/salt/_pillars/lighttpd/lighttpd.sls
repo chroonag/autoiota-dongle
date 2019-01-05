@@ -3,6 +3,7 @@ lighttpd:
   pki_directory: /etc/lighttpd/ssl
   cert_file: ca.crt
   pki_file: ca.key
+  pem_file: ca.pem
   document_root: /var/www/html
   {% if grains['os_family'] == 'Debian' %}
   config_file: /etc/lighttpd/lighttpd.conf
