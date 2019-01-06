@@ -28,7 +28,7 @@ sudo salt-call --local state.apply [test=True] [saltenv=base] [-l debug]
 
 
 ## Update System
-Systemupdate is performed ba the following command. A system restart may be required.
+Systemupdate is performed by the following command. A system restart may be required.
 ```
 sudo salt-call --local state.sls update
 ```
