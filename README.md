@@ -25,3 +25,10 @@ sudo systemctl restart salt-minion
 ```
 sudo salt-call --local state.apply [test=True] [saltenv=base] [-l debug]
 ```
+
+
+## Update System
+Systemupdate is performed ba the following command. A system restart may be required.
+```
+sudo salt-call --local state.sls update
+```
