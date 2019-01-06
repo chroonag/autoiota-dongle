@@ -1,3 +1,6 @@
+# default timezone format 'Area/Location'
+timezone: Europe/Zurich
+
 # wifi hotspot (hostapd-formula)
 hostapd:
   cardlist:

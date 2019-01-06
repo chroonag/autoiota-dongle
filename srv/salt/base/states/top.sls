@@ -7,6 +7,9 @@ base:
     - network.dhcp
     - network.ip
     - network.wlanclient
+    - lighttpd.install
+    - lighttpd.certificate
+    - lighttpd.config
 
   'prod*':
     - network.iptable
@@ -17,3 +20,4 @@ base:
       - raspi.optimize
       - raspi.bootconfig
       - raspi.udev
+      - raspi.timezone
