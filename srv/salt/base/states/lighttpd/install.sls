@@ -19,10 +19,13 @@ create-www-root-folder:
     - name: {{ pillar['lighttpd']['document_root'] }}
     - user: {{ pillar['lighttpd']['www_user'] }}
     - group: {{ pillar['lighttpd']['www_group'] }}
-    - dir_mode: 440
-    - file_mode: 440
+    - dir_mode: 540
+    - file_mode: 540
     - makedir: True
     - recurse: # sets the above parameters to all subfolders and files if they already exists
       - user
       - group
       - mode
+    - require:
+      - group: www-data-group
+      - user: www-data-user
