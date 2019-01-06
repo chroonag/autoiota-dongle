@@ -20,3 +20,4 @@ base:
       - raspi.optimize
       - raspi.bootconfig
       - raspi.udev
+      - raspi.timezone

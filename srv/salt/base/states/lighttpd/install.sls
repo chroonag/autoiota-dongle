@@ -29,3 +29,10 @@ create-www-root-folder:
     - require:
       - group: www-data-group
       - user: www-data-user
+
+rename-default-lighttpd-index:
+  file.rename:
+    - name: {{ pillar['lighttpd']['document_root'] }}/index.html
+    - source: {{ pillar['lighttpd']['document_root'] }}/index.lighttpd.html
+    - require:
+      - pkg: install-lighttpd-pkg
