@@ -6,3 +6,4 @@ base:
     - sshd/sshd
     - dongle/dongle
     - lighttpd/lighttpd
+    - wifi/wifi

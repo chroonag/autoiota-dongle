@@ -1,4 +1,6 @@
 lighttpd:
+  log_directory: /var/log/lighttpd
+  pid_directory: /var/run/lighttpd
   cert_directory: /etc/lighttpd/cert
   pki_directory: /etc/lighttpd/ssl
   cert_file: ca.crt

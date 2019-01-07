@@ -30,6 +30,24 @@ create-www-root-folder:
       - group: www-data-group
       - user: www-data-user
 
+create-lighttpd-log-folder:
+  file.directory:
+    - name: {{ pillar['lighttpd']['log_directory'] }}
+    - user: {{ pillar['lighttpd']['www_user'] }}
+    - group: {{ pillar['lighttpd']['www_group'] }}
+    - dir_mode: 750
+    - file_mode: 750
+    - makedir: True
+
+create-lighttpd-pid-folder:
+  file.directory:
+    - name: {{ pillar['lighttpd']['pid_directory'] }}
+    - user: {{ pillar['lighttpd']['www_user'] }}
+    - group: {{ pillar['lighttpd']['www_group'] }}
+    - dir_mode: 750
+    - file_mode: 750
+    - makedir: True
+
 rename-default-lighttpd-index:
   file.rename:
     - name: {{ pillar['lighttpd']['document_root'] }}/index.html

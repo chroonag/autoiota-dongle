@@ -2,7 +2,7 @@ update-installed-packages:
   pkg.uptodate:
     - refresh: true
 
-# Update firmware and reboot afterwards
+# Update raspi firmware
 raspi-update:
   cmd.run:
     - name: rpi-update

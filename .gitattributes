@@ -1,2 +1,5 @@
 # always convert line endings to LF (Linux)
 text eol=lf
+
+
+rpi-update

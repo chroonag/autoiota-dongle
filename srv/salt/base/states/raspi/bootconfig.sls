@@ -36,6 +36,7 @@ i2c-dev-module-enabled:
     - pattern: "^#?i2c-dev$"
     - repl: "i2c-dev"
     - append_if_not_found: true
+    
 i2c-dev-module-reloaded:
   cmd.run:
     - name: modprobe i2c-dev
@@ -56,11 +57,12 @@ warnings-disabled:
     - repl: "avoid_warnings=1"
     - append_if_not_found: true
 
+# fixed memory for gpu available rest id for cpu
 minimal-memory-split:
   file.replace:
     - name: /boot/config.txt
     - pattern: "^#?gpu_mem=.*$"
-    - repl: "gpu_mem=16"
+    - repl: "gpu_mem=64"
     - append_if_not_found: true
 
 bluetooth-disabled:
